@@ -1,129 +1,305 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+from tkinter import *
+from PIL import ImageTk, Image
 
-# C extensions
-*.so
+# currency values compared to the USD
+USD = 1.00
+EUR = 0.82
+JPY = 104.69
+GBP = 0.73
+AUD = 1.31
+CAD = 1.28
+CHF = 0.89
+CNY = 6.46
+SEK = 8.36
+MXN = 20.34
+NZD = 1.39
+SGD = 1.33
+HKD = 7.75
+NOK = 8.57
+KRW = 1118.00
+TRY = 7.27
+INR = 72.87
+RUB = 75.88
+BRL = 5.46
+ZAR = 15.11
+DKK = 6.13
+PLN = 3.73
+TWD = 28.02
+THB = 29.91
+MYR = 4.04
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+# supported currencies for the drop-down menu
+supported_currencies = [
+    'USD',
+    'EUR',
+    'JPY',
+    'GBP',
+    'AUD',
+    'CAD',
+    'CHF',
+    'CNY',
+    'SEK',
+    'MXN',
+    'NZD',
+    'SGD',
+    'HKD',
+    'NOK',
+    'KRW',
+    'TRY',
+    'INR',
+    'RUB',
+    'BRL',
+    'ZAR',
+    'DKK',
+    'PLN',
+    'TWD',
+    'THB',
+    'MYR'
+]
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+# making root
+root = Tk()
+root.title("USD Currency Converter")
+root.resizable(0, 0)
+# icon photo
+icon = PhotoImage(file='C:/Users/16097/Downloads/coin-icon-logo.gif')
+root.tk.call('wm', 'iconphoto', root, icon)
+# Currency Converter on the top
+logo = ImageTk.PhotoImage(Image.open('C:/Users/16097/Downloads/Currency Converter Logo.gif'))
+my_logo = Label(image=logo, width=1000, height=150)
+my_logo.pack()
+# window size
+root.geometry('1100x750')
+# window background
+root.config(bg='white')
+# text
+text = Label(root, text="Select a currency to convert to:", bg='white')
+text.configure(font=("Calibri", 13, "bold"))
+text.pack(anchor='w', padx=10, pady=10, ipadx=20, ipady=20)
+text2 = Label(root, text="How much money do you have:", bg='white')
+text2.configure(font=("Calibri", 13, "bold"))
+text2.pack(anchor='w', padx=10, pady=10, ipadx=20, ipady=20)
+# drop-down menu
+clicked = StringVar()
+clicked.set("None")
+drop = OptionMenu(root, clicked, *supported_currencies)
+drop.place(x=280, y=184)
+drop.configure(bg='light gray')
+# textbox
+textbox = Entry(root, width=50, bg='light gray', fg='black', borderwidth=3)
+textbox.place(x=280, y=275)
+# convert button
+convert_button = Button(root, text="Convert", padx=100, pady=50, bg='light gray', command=lambda: retrieve_input())
+convert_button.place(x=720, y=170)
+convert_button.configure(font=("Calibri", 16, "bold"))
+# input retriever for drop menu and textbox
+def retrieve_input():
+    textbox_value = float(textbox.get())
+    print(textbox_value)
+    drop_value = clicked.get()
+    print(drop_value)
+# convert USD to selected currency
+    if drop_value == 'USD':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * USD} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+    if drop_value == 'EUR':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * EUR} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'JPY':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * JPY} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'GBP':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * GBP} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'AUD':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * AUD} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'CAD':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * CAD} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'CHF':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * CHF} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'CNY':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * CNY} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'SEK':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * SEK} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'MXN':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * MXN} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'NZD':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * NZD} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'SGD':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * SGD} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'HKD':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * HKD} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'NOK':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * NOK} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'KRW':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * KRW} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'TRY':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * TRY} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'INR':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * INR} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'RUB':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * RUB} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'BRL':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * BRL} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'ZAR':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * ZAR} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'DKK':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * DKK} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'PLN':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * PLN} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'TWD':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * TWD} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'THB':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * THB} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.place(x=290, y=400)
+    else:
+        None
+    if drop_value == 'MYR':
+        print(" ")
+        print(" ")
+        convert_money = Label(root, text=f'you have {textbox_value * MYR} {drop_value}')
+        convert_money.configure(font=("Calibri", 50, "bold"))
+        convert_money.pack(justify='center')
+    else:
+        None
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
 
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-.python-version
-
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
+root.mainloop()
