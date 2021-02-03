@@ -92,214 +92,148 @@ textbox.place(x=280, y=275)
 convert_button = Button(root, text="Convert", padx=100, pady=50, bg='light gray', command=lambda: retrieve_input())
 convert_button.place(x=720, y=170)
 convert_button.configure(font=("Calibri", 16, "bold"))
+
+
+# close button function
+def close_window():
+    root.destroy()
+
+
+# close button
+close_button = Button(root, text="Close", padx=40, pady=20, bg='light gray', command=lambda: close_window())
+close_button.place(x=500, y=500)
+
+
 # input retriever for drop menu and textbox
 def retrieve_input():
     textbox_value = float(textbox.get())
-    print(textbox_value)
     drop_value = clicked.get()
-    print(drop_value)
+
 # convert USD to selected currency
     if drop_value == 'USD':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * USD} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * USD} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
 
     if drop_value == 'EUR':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * EUR} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * EUR} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'JPY':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * JPY} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * JPY} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'GBP':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * GBP} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * GBP} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'AUD':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * AUD} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * AUD} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'CAD':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * CAD} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * CAD} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'CHF':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * CHF} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * CHF} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'CNY':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * CNY} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * CNY} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'SEK':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * SEK} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * SEK} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'MXN':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * MXN} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * MXN} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'NZD':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * NZD} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * NZD} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'SGD':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * SGD} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * SGD} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'HKD':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * HKD} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * HKD} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'NOK':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * NOK} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * NOK} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'KRW':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * KRW} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * KRW} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'TRY':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * TRY} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * TRY} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'INR':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * INR} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * INR} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'RUB':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * RUB} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * RUB} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'BRL':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * BRL} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * BRL} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'ZAR':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * ZAR} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * ZAR} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'DKK':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * DKK} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * DKK} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'PLN':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * PLN} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * PLN} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'TWD':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * TWD} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * TWD} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'THB':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * THB} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * THB} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.place(x=290, y=400)
-    else:
-        None
+        convert_money.place(x=100, y=400)
+
     if drop_value == 'MYR':
-        print(" ")
-        print(" ")
-        convert_money = Label(root, text=f'you have {textbox_value * MYR} {drop_value}')
+        convert_money = Label(root, text=f'you have {textbox_value * MYR} {drop_value}', padx=200)
         convert_money.configure(font=("Calibri", 50, "bold"))
-        convert_money.pack(justify='center')
-    else:
-        None
+        convert_money.place(x=100, y=400)
 
 
 root.mainloop()
